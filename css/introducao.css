@@ -1,0 +1,85 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  font-family: "Joan", Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+.introducao h1::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: #a839ff;
+  transform: rotate(-45deg);
+  top: 20px;
+  left: -50px;
+  z-index: -1;
+}
+
+.introducao h1::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: #701cda;
+  transform: rotate(-45deg);
+  top: 20px;
+  left: -22px;
+  z-index: -1;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    top: 10px;
+  }
+  .introducao h1::after {
+    width: 30px;
+    height: 10px;
+    top: 10px;
+    left: -10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .introducao {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column-reverse;
+   gap: 30px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+}
